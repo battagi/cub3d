@@ -6,20 +6,21 @@
 /*   By: abattagi <abattagi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/10 22:45:15 by ouel-bou          #+#    #+#             */
-/*   Updated: 2025/02/04 15:33:45 by abattagi         ###   ########.fr       */
+/*   Updated: 2025/02/06 18:55:23 by abattagi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CUB3D_H
 # define CUB3D_H
-# define WIN_WIDTH 2000
-# define WIN_HEIGHT (16 * 2000) / 35
+# define WIN_WIDTH 1800
+# define WIN_HEIGHT (16 * 1800) / 35
 # define TILE_SIZE 64
 # define FOV 60
 # define RAY_ANGLE (FOV * M_PI / 180) / WIN_WIDTH
 # define RES 64
 # define MOVE_SPEED 1
 #define COLOR_PLAYER 0xFF91D2FF
+#define ROT_SPEED 0.2
 
 # include "../MLX/include/MLX42/MLX42.h"
 # include "get_next_line.h"
