@@ -6,7 +6,7 @@
 /*   By: ouel-bou <ouel-bou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 17:35:46 by ouel-bou          #+#    #+#             */
-/*   Updated: 2025/01/11 01:55:28 by ouel-bou         ###   ########.fr       */
+/*   Updated: 2025/02/07 16:59:41 by ouel-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static int	ft_check(char const *str, int c)
 	return (0);
 }
 
-char	*ft_strtrim(char *s1, char const *set)
+char	*ft_strtrim(char *s1, char const *set, int mod)
 {
 	char	*trimmed;
 	int		start;
@@ -35,9 +35,9 @@ char	*ft_strtrim(char *s1, char const *set)
 	end = ft_strlen(s1);
 	if (start == end)
 		return (ft_strdup (""));
-	while (ft_check(set, s1[start]))
+	while (ft_check(set, s1[start]) && (mod == 0 || mod == 1))
 		start++;
-	while (ft_check(set, s1[end - 1]))
+	while (ft_check(set, s1[end - 1]) && (mod == 0 || mod == 2))
 		end--;
 	trimmed = ft_substr(s1, start, end - start);
 	free(s1);
